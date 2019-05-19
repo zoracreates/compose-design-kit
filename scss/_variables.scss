@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
 //COLOR SHADE CALCULATION VARIABLE
 $color-variation: 7%;
 
@@ -29,6 +33,7 @@ $default-gradient: linear-gradient(to bottom right, $primary-light-analogous, $p
 //FONTS
 $title-font: 'Playfair Display', serif;
 $body-font: 'Roboto', sans-serif;
+$code-font: 'Roboto Mono', monospace;
 
 //MEASUREMENTS
 $default-padding: 20px;

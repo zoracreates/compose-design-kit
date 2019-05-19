@@ -5,9 +5,6 @@
     <meta charset="utf-8" />
     <title>Compose Design Kit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/compose.css" />
 </head>
 
@@ -23,6 +20,7 @@
                             Started</a></li>
                     <li><a href="buttons.html">Buttons</a></li>
                     <li><a href="card.html">Card</a></li>
+                    <li><a href="code.html">Code</a></li>
                     <li><a href="colors.html">Colors</a></li>
                     <li><a class="cdk-nav-link-active" href="grid.html">Grid</a></li>
                     <li><a href="hero.html">Hero</a></li>
@@ -45,21 +43,21 @@
                 <a
                     href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">flexbox</a>
                 to create columns. You can initiate the grid by adding a class of <span
-                    class="code-quote">cdk-grid</span>
-                to a containing element (usually a <span class="code-quote">&lt;div&gt;</span>).
+                    class="cdk-code-quote">cdk-grid</span>
+                to a containing element (usually a <span class="cdk-code-quote">&lt;div&gt;</span>).
                 This will cause the elements inside the container to
                 be lined next to each other. Elements inside the grid, will have the size of their, unless you
                 specify a column width.
             </p>
             <p>Compose allows for a grid of up to 6 columns, and sets a column gutter of 2% of the container size
                 between each column.
-                To set a column width use a class starting with <span class="code-quote">cdk-col-</span> and ending with
+                To set a column width use a class starting with <span class="cdk-code-quote">cdk-col-</span> and ending with
                 a number
-                between <span class="code-quote">1</span> to <span class="code-quote">6</span>. The number will indicate
+                between <span class="cdk-code-quote">1</span> to <span class="cdk-code-quote">6</span>. The number will indicate
                 how many columns you want your element to span. For example, an
-                element with a class of <span class="code-quote">cdk-col-3</span> will span 3 out of 6 columns (or half
+                element with a class of <span class="cdk-code-quote">cdk-col-3</span> will span 3 out of 6 columns (or half
                 of its container).
-                If you do not set a number to the <span class="code-quote">cdk-col</span> class, then it will span 6
+                If you do not set a number to the <span class="cdk-code-quote">cdk-col</span> class, then it will span 6
                 columns (or the full width of the container).
             </p>
 
@@ -89,20 +87,20 @@
 
             <h3>Responsive Column Widths</h3>
             <p>You may want the width of your columns to vary between devices. In order to do this, you will need to
-                add the suffixes <span class="code-quote">-md</span> and <span class="code-quote">-lg</span> to your
+                add the suffixes <span class="cdk-code-quote">-md</span> and <span class="cdk-code-quote">-lg</span> to your
                 column classes.
                 These two suffixes correspond to the Compose <a href="breakpoints.html">
                     medium and large responsive breakpoints respectively</a>.
             </p>
             <h4>Columns With Multiple Width Breakpoints</h4>
-            <p>Using a class of <span class="code-quote">cdk-col-3</span> will give your element a width of 3 columns
+            <p>Using a class of <span class="cdk-code-quote">cdk-col-3</span> will give your element a width of 3 columns
                 for all
                 devices. However, you may want the element to span 2 columns for tablets and 1 column for desktops. If
                 this is the case,
-                you can use the class suffixes <span class="code-quote">-md</span> and <span
-                    class="code-quote">-lg</span> to set breakpoints for
+                you can use the class suffixes <span class="cdk-code-quote">-md</span> and <span
+                    class="cdk-code-quote">-lg</span> to set breakpoints for
                 your columns. If we follow this example, you could have an element with three width classes: <span
-                    class="code-quote">class="cdk-col-3 cdk-col-2-md cdk-col-1-lg"</span>
+                    class="cdk-code-quote">class="cdk-col-3 cdk-col-2-md cdk-col-1-lg"</span>
             </p>
 
 
@@ -164,11 +162,11 @@
                 It may be possible that you want the size of your column to only change once.
                 For example, you may want it to span 6 columns in mobile and 2 columns in medium and large devices.
                 If that is the case, you only need to set the highest breakpoint. By default, any class starting with
-                <span class="code-quote">cdk-col</span> spans 6 columns up until its breakpoint is reached.
-                This means that an item with <span class="code-quote">class="cdk-col-2-md</span> will be 6 columns in
+                <span class="cdk-code-quote">cdk-col</span> spans 6 columns up until its breakpoint is reached.
+                This means that an item with <span class="cdk-code-quote">class="cdk-col-2-md</span> will be 6 columns in
                 small
                 devices, and 2 columns in medium and large devices. It also means that an item with <span
-                    class="code-quote">class="cdk-col-3-lg</span>
+                    class="cdk-code-quote">class="cdk-col-3-lg</span>
                 will be 6 columns in small and medium devices and 3 columns in large devices.
             </p>
             <div class="example">

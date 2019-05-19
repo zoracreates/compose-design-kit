@@ -1,0 +1,28 @@
+
+/*
+CODE SELECTORS
+______________________________________________________
+.cdk-code-quote
+pre code
+______________________________________________________
+*/
+
+pre code {
+    font-family: $code-font;
+    display: block;
+    max-width: inherit;
+    overflow-x: scroll;
+    border-radius: 2px;
+    color: $light-gray;
+    background: $black;
+    padding: $default-padding;
+}
+
+.cdk-code-quote {
+    background: $white;
+    color: $black;
+    font-weight: bold;
+    padding: 0 .2rem;
+    font-family: $code-font;
+    box-shadow: inherit;
+}

@@ -5,13 +5,14 @@
 @import 'typescale';
 @import 'components/buttons'; 
 @import 'components/card';
+@import 'components/code';
 @import 'components/hero';
 @import 'components/images';
 @import 'components/navbar';
 @import 'components/table';
 
 //CUSTOM STYLES
-$code-font: 'Share Tech Mono', monospace;
+
 
 body {
     margin: 0;
@@ -22,15 +23,6 @@ body {
 .example {
     margin: $default-margin auto;
  
-    pre {
-        max-width: inherit;
-        overflow-x: scroll;
-        border-radius: 2px;
-        color: $light-gray;
-        background: $black;
-        padding: $default-padding;
-     }
-
      .preview {
          border: 1px $black solid;
          &.center-view {
@@ -50,15 +42,3 @@ body {
     
 }
 
-code {
-    font-family: $code-font;
-}
-
-.code-quote {
-    background: $white;
-    color: $black;
-    font-weight: bold;
-    padding: 0 .2rem;
-    font-family: $code-font;
-    box-shadow: inherit;
-}
