@@ -14,4 +14,4 @@ Compose is a CSS only framework. It is made to be light weight and easy to maint
 ## Implementation Notes
 * Uses Sass to establish global varibales
 * Uses CSS Custom Properties to establish responsive logic
-* The hamburger navigation is partly inspired by [the work of Mark Carond](https://medium.com/@heyoka/responsive-pure-css-off-canvas-hamburger-menu-aebc8d11d793) but uses CSS custom properties has differrent styling
+* The hamburger navigation is partly inspired by [the work of Mark Caron](https://medium.com/@heyoka/responsive-pure-css-off-canvas-hamburger-menu-aebc8d11d793) but uses CSS custom properties has differrent styling
