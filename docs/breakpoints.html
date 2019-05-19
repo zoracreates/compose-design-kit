@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Compose Design Kit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/compose.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="cdk-navbar">
+            <h1 class="cdk-logo-text"><a class="cdk-logo-link" href="../index.html">Compose Design Kit</a></h1>
+            <a id="cdk-ham-nav-toggle" href="#cdk-ham-navbar" aria-label="Open Main Menu">Menu</a>
+            <div id="cdk-ham-navbar">
+                <ul class="cdk-nav-links-list">
+                    <li class="cdk-ham-nav-close"><a aria-label="Close Main Menu" href="#cdk-nav-toggle">X</a></li>
+                    <li><a href="../index.html">Get
+                            Started</a></li>
+                    <li><a href="buttons.html">Buttons</a></li>
+                    <li><a href="card.html">Card</a></li>
+                    <li><a href="colors.html">Colors</a></li>
+                    <li><a href="grid.html">Grid</a></li>
+                    <li><a href="hero.html">Hero</a></li>
+                    <li><a href="images.html">Images</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a class="cdk-nav-link-active" href="breakpoints.html">Responsive Breakpoints</a></li>
+                    <li><a href="table.html">Table</a></li>
+                    <li><a href="typography.html">Typhography</a></li>
+                </ul>
+                <a href="#cdk-ham-nav-toggle" aria-label="Close Main Menu" class="cdk-ham-nav-overlay"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cdk-wrapper">
+            <h2>Responsive Breakpoints</h2>
+            <p>Compose was developed mobile-first and uses <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a> 
+                to set breakpoints for its layout and typography. 
+                The breakpoints are as follow:
+            </p>
+            <ul>
+                <li>Large Devices: &ge;56.25em (900px)</li>
+                <li>Medium Devices: &ge;48em (768px)</li>
+                <li>Small Devices: &lt;48em</li>
+            </ul>
+            <p>If you would like to change the value of a breakpoint, you may do so by changing the values of the
+                <span class="code-quote">$large-devices</span> and/or <span class="code-quote">$medium-devices</span>
+                Sass variables in the <span class="code-quote">_variables.scss</span> partial file.
+            </p>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

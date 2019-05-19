@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Compose Design Kit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/compose.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="cdk-navbar">
+            <h1 class="cdk-logo-text"><a class="cdk-logo-link" href="../index.html">Compose Design Kit</a></h1>
+            <a id="cdk-ham-nav-toggle" href="#cdk-ham-navbar" aria-label="Open Main Menu">Menu</a>
+            <div id="cdk-ham-navbar">
+                <ul class="cdk-nav-links-list">
+                    <li class="cdk-ham-nav-close"><a aria-label="Close Main Menu" href="#cdk-nav-toggle">X</a></li>
+                    <li><a href="../index.html">Get
+                            Started</a></li>
+                    <li><a href="buttons.html">Buttons</a></li>
+                    <li><a href="card.html">Card</a></li>
+                    <li><a href="colors.html">Colors</a></li>
+                    <li><a href="grid.html">Grid</a></li>
+                    <li><a href="hero.html">Hero</a></li>
+                    <li><a href="images.html">Images</a></li>
+                    <li><a class="cdk-nav-link-active" href="navbar.html">Navbar</a></li>
+                    <li><a href="breakpoints.html">Responsive Breakpoints</a></li>
+                    <li><a href="table.html">Table</a></li>
+                    <li><a href="typography.html">Typhography</a></li>
+                </ul>
+                <a href="#cdk-ham-nav-toggle" aria-label="Close Main Menu" class="cdk-ham-nav-overlay"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cdk-wrapper">
+            <h2>Navigation Bar</h2>
+            <p>
+                You can create a responsive navigation by setting a class of <span class="code-quote">cdk-navbar</span> to a <span class="code-quote">&lt;nav&gt;</span> element, 
+                and setting a class of <span class="code-quote">cdk-nav-links-list</span> to an  <span class="code-quote">&lt;ul&gt;</span> inside the <span class="code-quote">&lt;nav&gt;</span>. 
+                The navigation will span 100% of its container.
+                Links will line horizontally, and wrap when the screen shrinks. 
+            </p>
+            <p>If you wish to set an active link, you can do so by adding a class of <span class="code-quote">cdk-nav-link-active</span>
+                to an <span class="code-quote">&lt;a&gt;</span>  within  <span class="code-quote">cdk-nav-links-list</span>.
+            </p>
+            <p>
+                Optionally, you can add a text-based logo to the navigation by setting a class of <span class="code-quote">cdk-text-logo</span> to a text element. 
+                This will give your selected element a font-size equivalent to an <span class="code-quote">&lt;h6&gt;</span> element. Additionally, if you place an <span class="code-quote">&lt;a&gt;</span> 
+                within <span class="code-quote">cdk-text-logo</span>, the element will look like regular text, and not link text. 
+            </p>
+            <div class="example">
+<pre><code>&lt;nav class="cdk-navbar"&gt;
+    &lt;p class="cdk-logo-text"&gt;&lt;a class="cdk-logo-link" href="#">Logo Example&lt;/a&gt;&lt;/p&gt;
+    &lt;ul class="cdk-nav-links-list"&gt;
+        &lt;li&gt;&lt;a class="cdk-nav-link-active" href="#"&gt;Active Nav Link&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Nav Link&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Nav Link&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href="#"&gt;Nav Link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                <div class="preview">
+                    <nav class="cdk-navbar">
+                         <p class="cdk-logo-text"><a class="cdk-logo-link" href="#">Logo Example</a></p>
+                            <ul class="cdk-nav-links-list">
+                                <li><a class="cdk-nav-link-active" href="#">Active Nav Link</a></li>
+                                <li><a href="#">Nav Link</a></li>
+                                <li><a href="#">Nav Link</a></li>
+                                <li><a href="#">Nav Link</a></li>
+                            </ul>
+                    </nav>
+                </div>
+            </div>
+            <h2>Hamburger Navigation</h2>
+            <p>
+                Compose comes with a CSS only hamburger navigation. The same navigation is being used for this
+                documentation page. Check it out! Simply reduce the size of your screen or open this website in 
+                a mobile device! 
+            </p>
+            <p>
+                If you wish your navigation to collapse into a hamburger element on mobile screens you 
+                can wrap the elements you need to hide within an element with an id of <span class="code-quote">cdk-ham-navbar</span>. 
+                Outside <span class="code-quote">cdk-ham-navbar</span>, create an <span class="code-quote">&lt;a&gt;</span> with an 
+                id of <span class="code-quote">cdk-ham-nav-toggle</span> and <span class="code-quote">href="#cdk-ham-navbar"</span>. 
+                The <span class="code-quote">cdk-ham-nav-toggle</span> id will create a button no wider than 4rem. Inside the toggle button you may place 
+                any short text or small image you wish the user to see (something descriptive such as the word “Menu” is recommended).     
+            </p>
+            <p>
+                To add close options to the hamburger navigation,  you have two options. 
+                You can choose to combine these or only add one.
+            </p>
+            <ol>
+                <li>Create an <span class="code-quote">&lt;li&gt;</span> within 
+                    <span class="code-quote">cdk-nav-links-list</span>, with a class of  <span class="code-quote">cdk-ham-nav-close</span>. 
+                    Within that item add an <span class="code-quote">&lt;a&gt;</span>with <span class="code-quote">href="#cdk-ham-nav-toggle"</span>. 
+                    Inside the <span class="code-quote">&lt;a&gt;</span> you may place text or image you wish the user to see 
+                    (an “x” or the word “close” is recommended). 
+                </li>
+                <li>
+                    Create an empty <span class="code-quote">&lt;a&gt;</span> 
+                    with a class of <span class="code-quote">cdk-ham-nav-overlay</span>, 
+                    and <span class="code-quote">href="#cdk-ham-nav-toggle"</span>, 
+                    at the bottom of the  <span class="code-quote">cdk-ham-navbar</span> element. 
+                    This will create a clickable/tappable opaque overlay behind the navigation, when it is expanded.
+                </li>
+            </ol>
+            <div class="example">
+<pre><code>&lt;nav class="cdk-navbar"&gt;
+    &lt;p class="cdk-logo-text"&gt;&lt;a class="cdk-logo-link" href="#">Logo Example&lt;/a&gt;&lt;/p&gt;
+    
+    &lt;!--Toggle button--&gt;
+    &lt;a id="cdk-ham-nav-toggle" href="#cdk-ham-navbar" aria-label="Open Main Menu"&gt;Menu&lt;/a&gt;
+     
+    &lt;!--Anything within #cdk-ham-navbar will be hidden in mobile unless toggled--&gt;
+    &lt;div id="cdk-ham-navbar"&gt;
+  
+        &lt;ul class="cdk-nav-links-list"&gt;
+            &lt;!--Close button--&gt;
+            &lt;li class="cdk-ham-nav-close"&gt;
+                &lt;a aria-label="Close Main Menu" href="#cdk-nav-toggle"&gt;X&lt;/a&gt;
+            &lt;/li&gt;
+        
+            &lt;!--Navigation Links--&gt;
+            &lt;li&gt;&lt;a class="cdk-nav-link-active" href="#"&gt;Active Nav Link&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Nav Link&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Nav Link&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Nav Link&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;!--Close overlay--&gt;
+        &lt;a href="#cdk-ham-nav-toggle" aria-label="Close Main Menu" class="cdk-ham-nav-overlay"&gt;&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+            </div>
+            <h3>Note on Accessibility</h3>
+            <p>
+                To help with screen reader accessibility, add <span class="code-quote">aria-label="Close Main Menu"</span>
+                to any menu-closing <span class="code-quote">&lt;a&gt;</span> and <span class="code-quote">aria-label="Open Main Menu"</span> 
+                to any menu-opening <span class="code-quote">&lt;a&gt;</span>.
+            </p>
+            <h3>CSS Only Hamburger Nav Caveats</h3>
+            <p>
+                The hamburger navigation works by using the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:target">CSS <span class="code-quote">:target</span> pseudo-class</a>. 
+                Because of this the hamburger navigation will open whenever an element with <span class="code-quote">href="#cdk-ham-navbar"</span> is 
+                clicked/tapped, or when the browser address bar is set to a url ending in <span class="code-quote">#cdk-ham-navbar</span>.
+            </p>
+
+
+            
+        </div>
+    </main>
+
+</body>
+</html>

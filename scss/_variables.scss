@@ -1,0 +1,39 @@
+//COLOR SHADE CALCULATION VARIABLE
+$color-variation: 7%;
+
+//PRIMARY COLOR SHADES AND DERIVATIVES
+$primary-color: #0170A7;
+$primary-dark: darken($primary-color, $color-variation);
+$primary-light: lighten($primary-color, $color-variation);
+$primary-light-analogous: adjust-hue($primary-light, -15);
+
+//SECONDARY COLOR SHADES AND DERIVATIVES
+$secondary-color: #DC4F28;
+$secondary-dark: darken($secondary-color, $color-variation);
+$secondary-light: lighten($secondary-color, $color-variation);
+
+//ACCENT COLORS 
+$danger-color: #E21822;
+$danger-dark: darken($danger-color, $color-variation);
+
+//WHITE, GRAYS, BLACKS
+$dark-gray: #2D3E50;
+$medium-gray: #7F91A4;
+$light-gray: #EAF0F6;
+$black: darken($dark-gray, $color-variation);
+$white: #FFF;
+
+//GRADIENT
+$default-gradient: linear-gradient(to bottom right, $primary-light-analogous, $primary-light, $primary-color);
+
+//FONTS
+$title-font: 'Playfair Display', serif;
+$body-font: 'Roboto', sans-serif;
+
+//MEASUREMENTS
+$default-padding: 20px;
+$default-margin:  $default-padding;
+
+//BREAK POINTS
+$large-devices: 56.25em; // 900px
+$medium-devices: 48em; //768px

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Compose Design Kit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/compose.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="cdk-navbar">
+            <h1 class="cdk-logo-text"><a class="cdk-logo-link" href="../index.html">Compose Design Kit</a></h1>
+            <a id="cdk-ham-nav-toggle" href="#cdk-ham-navbar" aria-label="Open Main Menu">Menu</a>
+            <div id="cdk-ham-navbar">
+                <ul class="cdk-nav-links-list">
+                    <li class="cdk-ham-nav-close"><a aria-label="Close Main Menu" href="#cdk-nav-toggle">X</a></li>
+                    <li><a href="../index.html">Get
+                            Started</a></li>
+                    <li><a href="buttons.html">Buttons</a></li>
+                    <li><a href="card.html">Card</a></li>
+                    <li><a href="colors.html">Colors</a></li>
+                    <li><a href="grid.html">Grid</a></li>
+                    <li><a href="hero.html">Hero</a></li>
+                    <li><a href="images.html">Images</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="breakpoints.html">Responsive Breakpoints</a></li>
+                    <li><a class="cdk-nav-link-active" href="table.html">Table</a></li>
+                    <li><a href="typography.html">Typhography</a></li>
+                </ul>
+                <a href="#cdk-ham-nav-toggle" aria-label="Close Main Menu" class="cdk-ham-nav-overlay"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cdk-wrapper">
+            <h2>Table</h2>
+            <p>
+                Compose provides background-color, border, and font styles for tables. To use a Compose table,
+                add a class of <span class="code-quote">cdk-table</span> to a <span
+                    class="code-quote">&lt;table&gt;</span>
+                element.
+            </p>
+
+            <p>
+                Note that all <span class="code-quote">&lt;th&gt;</span> elements are bolded by default. Furthemore, any
+                <span class="code-quote">&lt;th&gt;</span> elements
+                with <span class="code-quote">scope="col"</span> will be distinguished by a blue background and white
+                text.
+            </p>
+
+            <div class="example">
+
+<pre><code>&lt;table class="cdk-table"&gt;
+    &lt;caption&gt;
+        This is a styled table caption for a table preview.
+    &lt;/caption&gt;
+
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;Col Heading&lt;/th&gt;
+            &lt;th scope="col"&gt;Col Heading&lt;/th&gt;
+            &lt;th scope="col"&gt;Col Heading&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;Row Heading&lt;/th&gt;
+            &lt;td&gt;Data&lt;/td&gt;
+            &lt;td&gt;More data&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;Row Heading&lt;/th&gt;
+            &lt;td&gt;Data&lt;/td&gt;
+            &lt;td&gt;More data&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;Row Heading&lt;/th&gt;
+            &lt;td&gt;Data&lt;/td&gt;
+            &lt;td&gt;More data&lt;/td&gt;
+        &lt;/tr&gt;
+     &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+                <div class="preview center-view">
+                    <table class="cdk-table">
+                        <caption>
+                            This is a styled table caption for a table preview.
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Col Heading</th>
+                                <th scope="col">Col Heading</th>
+                                <th scope="col">Col Heading</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Row Heading</th>
+                                <td>Data</td>
+                                <td>More data</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Row Heading</th>
+                                <td>Data</td>
+                                <td>More data</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Row Heading</th>
+                                <td>Data</td>
+                                <td>More data</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

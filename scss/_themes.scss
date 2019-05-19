@@ -1,0 +1,61 @@
+/*
+______________________________________________________
+
+THEME SELECTORS
+______________________________________________________
+.cdk-theme-default
+.cdk-theme-light
+.cdk-theme-dark
+.cdk-theme-gradient
+
+*/
+
+//DEFAULT THEME
+body,
+.cdk-theme-default {
+    color: $dark-gray;
+    background: $light-gray;
+}
+
+a:not([class*="cdk-btn"]) {
+    --link-highlight-color: #{lighten($primary-light, 35)};
+    --link-highlight-size: -7px;
+
+    border-bottom: 1px $dark-gray solid;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    box-shadow: inset 0 var(--link-highlight-size) 0 0 var(--link-highlight-color);
+    &:hover {
+        --link-highlight-size: 300px;
+    }
+}
+
+//THEME VARIATIONS
+.cdk-theme-light {
+    background-color: $white;
+}
+
+.cdk-theme-dark {
+    background-color: $black;
+    color: $white;
+
+    a:not([class*="cdk-btn"]) {
+        --link-highlight-size: 0px;
+        border-color: $white;
+        &:hover {
+            --link-highlight-size: 300px;
+            --link-highlight-color: #{$secondary-dark};
+        }
+    }
+}
+
+.cdk-theme-gradient {
+    background: $default-gradient;
+    color: $white;
+
+    a:not([class*="cdk-btn"]) {
+        border-color: $white;
+        --link-highlight-color: #{$secondary-dark};
+    }
+}

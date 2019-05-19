@@ -1,0 +1,40 @@
+/*
+______________________________________________________
+
+TABLE SELECTORS
+______________________________________________________
+.cdk-table
+
+*/
+
+table.cdk-table {
+    text-align: left;
+    border-collapse: collapse;
+    border-radius: 2px;
+    margin: $default-margin 0 $default-margin 0;
+    border: 1px $medium-gray solid;
+    background: $white;
+
+    caption {
+        text-align: left;
+        color: inherit;
+        font-style: italic;
+        font-size: calc(var(--p-size) - .125rem);
+    }
+
+   th {
+       font-weight: bold;
+       &[scope="col"] {
+           background: $primary-color;
+           color: $white;
+           border: none;
+       }
+   }
+   
+   th,
+   td {
+       padding: .5rem;
+       border: 1px $medium-gray solid;
+       color: $dark-gray;  
+   }
+}

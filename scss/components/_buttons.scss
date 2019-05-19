@@ -1,0 +1,117 @@
+/*
+______________________________________________________
+
+BUTTON SELECTORS
+______________________________________________________
+To select all buttons
+%cdk-btn-inverted
+
+To select all inverted buttons
+%cdk-btn-inverted
+
+To select specific buttons
+.cdk-btn-default
+.cdk-btn-primary
+.cdk-btn-dark
+.cdk-btn-inverted
+.cdk-btn-inverted-primary
+.cdk-btn-inverted-dark
+.cdk-btn-deactivated
+
+*/
+%cdk-btn {
+    border: none;
+    border-radius: 2px;
+    color: $white;
+    display: inline-block;
+    font-family: $body-font;
+    font-size: 19px;
+    font-weight: bold;
+    height: fit-content;
+    margin: .5rem 0;
+    padding: 21px;
+    line-height: 0;
+    text-align: center;
+    text-decoration: none;
+    width: fit-content;
+
+  
+    &:hover {
+        transition: .5s;
+        color: $light-gray;
+    }
+}
+
+%cdk-btn-inverted {
+    @extend %cdk-btn;
+    box-shadow: inset 0 0 0 2px $white;
+    background: transparent;
+}
+
+//DEFAULT BTNS
+.cdk-btn-default {
+    @extend %cdk-btn;
+    background: $primary-color;
+    &:hover {
+        background: $primary-dark;
+    }
+}
+
+.cdk-btn-primary {
+    @extend %cdk-btn;
+    background: $secondary-color;
+    &:hover {
+        background-color: $secondary-dark;
+    }
+}
+
+.cdk-btn-dark {
+    @extend %cdk-btn;
+    background: $dark-gray;
+
+    &:hover {
+        @extend %cdk-btn;
+        background-color: $black;
+    }
+}
+
+.cdk-btn-danger {
+    @extend %cdk-btn;
+    background-color: $danger-color;
+
+    &:hover {
+        @extend %cdk-btn;
+        background-color: $danger-dark;
+    }
+}
+
+//INVERTED BUTTONs
+.cdk-btn-inverted-default {
+    @extend %cdk-btn-inverted;
+    &:hover{
+        background: $primary-color;
+    }
+}
+
+.cdk-btn-inverted-primary {
+    @extend %cdk-btn-inverted;
+    &:hover {
+        background: $secondary-color;
+    }
+}
+
+.cdk-btn-inverted-dark {
+    @extend %cdk-btn-inverted;
+    &:hover {
+        background-color: $dark-gray;
+    }
+}
+
+//DEACTIVATED BUTTON
+.cdk-btn-deactivated,
+.cdk-btn-deactivated:hover {
+    @extend %cdk-btn;
+    background: $medium-gray;
+    color: $dark-gray;
+    cursor: default;
+}

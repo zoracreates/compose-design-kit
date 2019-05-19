@@ -1,0 +1,64 @@
+@import 'normalize';
+@import 'variables'; //must come before all files, except normalize
+@import 'themes';
+@import 'layout';
+@import 'typescale';
+@import 'components/buttons'; 
+@import 'components/card';
+@import 'components/hero';
+@import 'components/images';
+@import 'components/navbar';
+@import 'components/table';
+
+//CUSTOM STYLES
+$code-font: 'Share Tech Mono', monospace;
+
+body {
+    margin: 0;
+    padding: 0;
+  
+  }
+
+.example {
+    margin: $default-margin auto;
+ 
+    pre {
+        max-width: inherit;
+        overflow-x: scroll;
+        border-radius: 2px;
+        color: $light-gray;
+        background: $black;
+        padding: $default-padding;
+     }
+
+     .preview {
+         border: 1px $black solid;
+         &.center-view {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+         &.img-view {
+              line-height: 0;
+         }
+         &.dark-view {
+             background: adjust-hue($primary-color, -15)
+         }
+     }
+
+
+    
+}
+
+code {
+    font-family: $code-font;
+}
+
+.code-quote {
+    background: $white;
+    color: $black;
+    font-weight: bold;
+    padding: 0 .2rem;
+    font-family: $code-font;
+    box-shadow: inherit;
+}

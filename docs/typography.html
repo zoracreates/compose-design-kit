@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Compose Design Kit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/compose.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="cdk-navbar">
+            <h1 class="cdk-logo-text"><a class="cdk-logo-link" href="../index.html">Compose Design Kit</a></h1>
+            <a id="cdk-ham-nav-toggle" href="#cdk-ham-navbar" aria-label="Open Main Menu">Menu</a>
+            <div id="cdk-ham-navbar">
+                <ul class="cdk-nav-links-list">
+                    <li class="cdk-ham-nav-close"><a aria-label="Close Main Menu" href="#cdk-nav-toggle">X</a></li>
+                    <li><a href="../index.html">Get
+                            Started</a></li>
+                    <li><a href="buttons.html">Buttons</a></li>
+                    <li><a href="card.html">Card</a></li>
+                    <li><a href="colors.html">Colors</a></li>
+                    <li><a href="grid.html">Grid</a></li>
+                    <li><a href="hero.html">Hero</a></li>
+                    <li><a href="images.html">Images</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="breakpoints.html">Responsive Breakpoints</a></li>
+                    <li><a href="table.html">Table</a></li>
+                    <li><a class="cdk-nav-link-active" href="typography.html">Typhography</a></li>
+                </ul>
+                <a href="#cdk-ham-nav-toggle" aria-label="Close Main Menu" class="cdk-ham-nav-overlay"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cdk-wrapper">
+            <h2>Title and Body Fonts</h2>
+            <p>
+                Compose uses two different font-families: Playfair Display for headings (<span
+                    class="code-quote">h1</span> - <span class="code-quote">h6</span>),
+                and Roboto for all other text. You can change these font-families by changing the Sass variables
+                <span class="code-quote">$title-font</span> and <span class="code-quote">$body-font</span> in the <span
+                    class="code-quote">_variables.scss</span> partial file.
+            </p>
+            <h2>Typescale</h2>
+            <p>
+                By default Compose uses a Major Third typescale. This means that font-sizes increment by 1.25.
+                In devices with a screen size of 48em (768px) or less, any body text (non-heading text elements such as paragraphs and lists)
+                have a font-size of 1rem, and heading elements (<span class="code-quote">h1</span> - <span
+                    class="code-quote">h6</span>) are based on an increment of 1.25.
+                In devices larger than 48em, the body text is 1.25rem, and the heading elements increase from that base.
+                The lists below show how this looks like. 
+            </p>
+            <p>Note that the document root font-size for Compose is 16px,
+                    and this establishes the value of 1rem (1rem = 16px and 1.25rem = 20px).</p>
+
+            <h3>Small Screens Scale&mdash;48em (768px) or smaller</h3>
+            <ul>
+                <li>Paragraphs and lists: 1rem (16px)</li>
+                <li>Heading 6: 1rem x 1.25 = 1.25rem (20px)</li>
+                <li>Heading 5: 1.25rem x 1.25 = 1.563rem (25px)</li>
+                <li>Heading 4: 1.563rem x 1.25 = 1.953rem (31px)</li>
+                <li>Heading 3: 1.953rem x 1.25 = 2.441rem (39px)</li>
+                <li>Heading 2: 2.441rem x 1.25 = 3.052rem (48px)</li>
+                <li>Heading 1: 3.052rem x 1.25 = 3.815rem (61px)</li>
+            </ul>
+            <h3>Large Screens Scale&mdash;larger than 48em (768px)</h3>
+            <ul>
+                <li>Paragraphs and lists: 1.25rem (20px)</li>
+                <li>Heading 6: 1.25rem x 1.25 = 1.563rem (25px)</li>
+                <li>Heading 5: 1.563rem x 1.25 = 1.953rem  (31px)</li>
+                <li>Heading 4: 1.953rem  x 1.25 = 2.441rem(39px)</li>
+                <li>Heading 3: 2.441rem  x 1.25 = 3.052rem (48px)</li>
+                <li>Heading 2: 3.052rem x 1.25 = 3.815rem (61px)</li>
+                <li>Heading 1: 3.052rem x 1.25 = 4.769rem (76px)</li>
+            </ul>
+
+            <h2>Changing the Default Scale</h2>
+            <p>
+                Compose uses CSS custom properties to create a customizable responsive typescale.  
+                The font-size for body text elements is set by the 
+               <span class="code-quote">--base-font-size</span> CSS custom property. 
+               The rest of the font-sizes build off <span class="code-quote">--base-font-size</span>, 
+                and they increase at a ratio set by the <span class="code-quote">--multiplier</span> CSS custom property. 
+                You can checkout all 
+                typescale custom properties in the <span class="code-quote">_typescale.scss</span> partial file.
+            </p>
+            <p>
+                As suggested by the lists of font-sizes above, the default <span class="code-quote">--multiplier</span> property is set to 1.25, 
+                and the default <span class="code-quote">--base-font-size</span> is set to 1rem for devices with a 
+                screen size of 48em (768px)  or smaller and 1.25rem for devices larger than 48em.
+            </p>
+            <p>The easiest way to change the typescale is by changing the value of 
+                <span class="code-quote">--base-font-size</span> and/or 
+                <span class="code-quote">--multiplier</span> at the CSS  
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:root">
+                <span class="code-quote">:root</span>
+                    pseudo-class 
+                </a>
+            </p>
+            <div class="example">
+
+<pre><code>//change the font-scale for devices 500px or bigger
+@media (min-width: 500px) {
+    :root {
+        --base-font-size: .75rem; //12px
+        --multiplier: 1.414;
+    }
+}   
+
+//results
+    // body, p, ul, ol: .75rem (12px)
+    // h6: .75rem x 1.414 =  1.414rem (16px)
+    // h5: 1.414rem x 1.414 = 1.999rem (23px)
+    // h4: 1.999rem  x 1.414 = 2.827rem (33px)
+    // h3: 2.827rem x 1.414= 3.998rem (47px)
+    // h2: 3.998rem x 1.414 = 5.653rem (67px)
+    // h1: 5.653rem x 1.414 = 7.993rem(95px)</code></pre>
+            </div>
+            
+        </div>
+    </main>
+
+</body>
+
+</html>

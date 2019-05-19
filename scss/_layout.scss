@@ -1,0 +1,147 @@
+/*
+______________________________________________________
+
+CONTAINER SELECTORS
+______________________________________________________
+
+.cdk-wrapper 
+.cdk-grid
+______________________________________________________
+
+COLUMN WIDTH SELECTORS
+______________________________________________________
+
+.cdk-col-sm-1    TO   .cdk-col-sm-6
+
+.cdk-col-md-1    TO   .cdk-col-md-6
+
+.cdk-col-lg-1    TO   .cdk-col-lg-6
+
+*/
+
+
+//CONSTANT STYLES
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+ 
+}
+
+.cdk-wrapper {
+    max-width: 1200px;
+    min-width: 300px;
+    margin:  auto;
+    padding: $default-padding;
+}
+
+.cdk-grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-around;
+}
+
+//INTITAL (MOBILE) GRID
+[class*="cdk-col"] {
+    --gap: 1.5%;
+    --columns: 6; 
+    --width: var(--width-mobile, var(--columns));
+    --width-mobile: 6;
+    
+    flex-basis: calc((var(--width) / var(--columns) * 100%) - var(--gap));
+}
+
+//BREAKPOINTS
+@media (min-width: $medium-devices),
+print {
+    [class*="cdk-col"] {
+        --width-tablet: var(--width-mobile);
+        --width: var(--width-tablet);
+    }
+}
+
+@media (min-width:  $large-devices){ 
+    [class*="cdk-col"] {
+        --width-desktop: var(--width-tablet);
+        --width: var(--width-desktop);
+    }
+}
+
+//MOBILE COLUMN DECLARATIONS
+.cdk-col-1 {
+    --width-mobile: 1;
+}
+
+.cdk-col-2 {
+    --width-mobile: 2;
+}
+
+.cdk-col-3 {
+    --width-mobile: 3;
+}
+
+.cdk-col-4 {
+    --width-mobile: 4;
+}
+
+.cdk-col-5 {
+    --width-mobile: 5;
+}
+
+.cdk-col-6 {
+    --width-mobile: 6;
+}
+
+//TABLET COLUMN DECLARATIONS
+.cdk-col-1-md {
+    --width-tablet: 1;
+}
+
+.cdk-col-2-md {
+    --width-tablet: 2;
+}
+
+.cdk-col-3-md {
+    --width-tablet: 3;
+}
+
+.cdk-col-4-md {
+    --width-tablet: 4;
+}
+
+.cdk-col-5-md {
+    --width-tablet: 5;
+}
+
+.cdk-col-6-md {
+    --width-tablet: 6;
+}
+
+//DESKTOP COLUMN DECLARATIONS
+.cdk-col-1-lg {
+    --width-desktop: 1;
+}
+
+.cdk-col-2-lg {
+    --width-desktop: 2;
+}
+
+.cdk-col-3-lg {
+    --width-desktop: 3;
+}
+
+.cdk-col-4-lg {
+    --width-desktop: 4;
+}
+
+.cdk-col-5-lg {
+    --width-desktop: 5;
+}
+
+.cdk-col-6-lg {
+    --width-desktop: 6;
+}

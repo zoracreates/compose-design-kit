@@ -1,0 +1,67 @@
+//INTITAL (MOBILE) TYPESCALE
+:root {
+    font-size: 16px; //sets the value for 1rem (--base-font-size)
+  
+    --base-font-size: 1rem;
+    --multiplier: 1.25;
+
+    --p-size: var(--base-font-size);
+    --h6-size: calc(var(--base-font-size) * var(--multiplier));
+    --h5-size: calc(var(--h6-size) * var(--multiplier));
+    --h4-size: calc(var(--h5-size) * var(--multiplier));
+    --h3-size: calc(var(--h4-size) * var(--multiplier));
+    --h2-size: calc(var(--h3-size) * var(--multiplier));
+    --h1-size: calc(var(--h2-size) * var(--multiplier));
+}
+
+@media (min-width:  $large-devices){ 
+    :root{ //change typescale
+        --base-font-size: 1.25rem; //h6-size
+    }
+}
+
+//TYPE DECLARATIONS
+body,
+p, 
+ul,
+ol {
+  font-size: var(--p-size);
+  font-family: $body-font;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
+    font-family: $title-font; 
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+h6 {
+    font-size: var(--h6-size);
+}
+
+h5 {
+    font-size: var(--h5-size);
+}
+
+h4 {
+    font-size: var(--h4-size);
+}
+
+h3 {
+    font-size: var(--h3-size);
+}
+
+h2 {
+    font-size: var(--h2-size);
+}
+
+h1 {
+    font-size: var(--h1-size);
+}

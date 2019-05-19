@@ -1,0 +1,254 @@
+/*
+______________________________________________________
+
+NAVBAR SELECTORS
+______________________________________________________
+.cdk-navbar
+.cdk-logo-text
+.cdk-nav-link-active
+.cdk-ham-nav-overlay
+#cdk-ham-nav-toggle
+#cdk-ham-navbar
+______________________________________________________
+NOTE
+This code is mostly original, but idea for the hamburger menu came from a Medium article by Mark Caron
+https://medium.com/@heyoka/responsive-pure-css-off-canvas-hamburger-menu-aebc8d11d793
+______________________________________________________
+*/
+
+//NAV BREAKPOINT LOGIC
+
+[class*="cdk-ham-nav"],
+[id*="cdk-ham-nav"] {
+    --display: var(--mobile-display);
+
+    display: var(--display, block);
+}
+
+#cdk-ham-navbar .cdk-nav-links-list {
+    --background-color: var(--mobile-background-color);
+    --border: var(--mobile-border);
+    --padding-left: var(--mobile-padding-left);
+    --position: var(--mobile-position);
+    --text-color: var(--mobile-text-color);
+    --width: var(--mobile-width);
+ 
+        
+    color: var(--text-color, inherit);
+    background: var(--background-color, transparent);
+    border: var(--border, none);
+    padding-left: var(--padding-left, #{$default-padding});
+    position: var(--position, static);
+        left: 0;
+    width: var(--width, 100%);
+
+    li  {
+        --font-size: var(--mobile-font-size);
+        --padding: var(--mobile-padding);
+
+        //-var(--display)is inherited from the parent, this sets it as a value to the display property
+        display: var(--display, block);
+        font-size: var(--font-size, var(--p-size));
+        padding: var(--padding, #{$default-padding});
+            
+        a {
+            &.cdk-nav-link-active,
+            &.cdk-nav-link-active:hover {
+                --link-color: var(--mobile-link-color);
+                --link-highlight: var(--mobile-link-highlight);
+
+                box-shadow: var(--link-highlight);
+                color: var(--link-color, inherit);
+            }
+        }
+    }
+}
+
+
+
+@media(min-width: $medium-devices) {
+    [class*="cdk-ham-nav"],
+    [id*="cdk-ham-nav"] {
+        --display: var(--desktop-display);
+    }
+
+    #cdk-ham-navbar .cdk-nav-links-list {
+        --background-color: var(--desktop-background-color);
+        --border: var(--desktop-border);
+        --padding-left: var(--desktop-padding-left);
+        --position: var(--desktop-position);
+        --text-color: (--desktop-text-color);
+        --width: var(--desktop-width);
+
+       li {
+            --display: var(--desktop-display); //--display custom property inherited from parent
+            --font-size: var(--desktop-font-size);
+            --padding: var(--desktop-padding);
+            
+            a {
+                &.cdk-nav-link-active,
+                &.cdk-nav-link-active:hover {
+                    --link-color: var(--desktop-link-color);
+                    --link-highlight: var(--desktop-link-highlight);
+                }
+            }
+        }
+    } 
+}
+
+
+
+//NAV STYLE DECLARATIONS*
+
+//NAVBAR
+.cdk-navbar {
+    position: relative; 
+    padding: $default-padding / 2  $default-padding;
+    width: 100%;
+
+    .cdk-logo-text {
+        font-size:var(--h6-size);
+        margin-top: 0;
+        font-family: $title-font;
+        
+        a.cdk-logo-link {
+            border: none;
+            box-shadow: none;
+        }
+    }
+
+    .cdk-nav-links-list {
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+        z-index: 1001;
+ 
+        //clear fix for close button
+         &::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    
+        li {
+            display: inline-block;
+            list-style: none;
+           
+            &:not(:last-child){
+                padding-right: #{$default-padding};
+            }
+
+           a {
+                border: none;
+                box-shadow: none;
+                padding: 0 .2rem;
+                text-transform: capitalize;
+
+                &:hover {
+                    box-shadow: inset 0px 0px 300px $secondary-color;
+                    color: $white;
+                }
+
+                &.cdk-nav-link-active { 
+                    box-shadow: inset 0px 0px 300px #{$primary-color}; 
+                    color: $white; 
+                    text-decoration: line-through;
+                }
+            }
+        }
+    }
+}
+
+//HAM NAV TOGGLE BUTTON
+#cdk-ham-nav-toggle {
+    --mobile-display: block;
+    --desktop-display: none;
+
+    background: $white;
+    border: 2px solid $secondary-color;
+    box-shadow: none;
+    border-radius: 2px;
+    color: $dark-gray;
+    max-width: 4rem;
+    padding: .3rem;
+    text-align: center;
+   
+    &:hover {
+        background: $light-gray;
+    }
+}
+
+//HAM NAV
+#cdk-ham-navbar {
+
+    &:not(:target) {
+        --mobile-display: none;
+        --desktop-display: block;
+    }
+
+    .cdk-nav-links-list {
+        --mobile-background-color: #{$black};
+        --mobile-border: 2px solid #{$white};
+        --mobile-padding-left: #{$default-padding};
+        --mobile-position: absolute;
+        --mobile-text-color: #{$white};
+        --mobile-width: 300px;
+   
+        --desktop-background-color: transparent;
+        --desktop-border: none;
+        --desktop-padding-left: 0;
+        --desktop-position: static;
+        --desktop-text-color: inherit;
+        --desktop-width: 100%;
+        }
+
+    li {
+        --mobile-display: block;
+        --mobile-font-size: var(--h6-size);
+        --mobile-padding: #{$default-padding} 0;
+      
+        --desktop-display: inline-block;
+        --desktop-font-size: var(--p-size);
+        --desktop-padding: 0 #{$default-padding} 0 0;
+       
+        &.cdk-ham-nav-close {
+            //all li elements have var(--display, block), 
+            //this gives the close li a different display than others
+            --mobile-display: block;
+            --desktop-display: none;
+
+            float: right;
+            margin: $default-margin;
+        }
+
+        a {
+            &.cdk-nav-link-active {
+                --mobile-link-color: #{$medium-gray};
+                --mobile-link-highlight: none;
+
+                --desktop-link-color:  #{$white};
+                --desktop-link-highlight: inset 0px 0px 300px #{$primary-color};
+            }
+        }
+        
+    }
+
+    .cdk-ham-nav-overlay {
+        --mobile-display: block;
+        --desktop-display: none;
+    
+        background: $dark-gray;
+        cursor: default;
+        height: 100%;
+        opacity: .5;
+        position: fixed;
+            left: 0;
+            top: 0;
+        width: 100%;
+        z-index: 998;
+        
+        &:hover {
+            box-shadow: none;
+        }
+    }
+}
