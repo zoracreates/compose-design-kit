@@ -5,14 +5,11 @@
     <meta charset="utf-8" />
     <title>Compose Design Kit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/compose.css" />
 </head>
 
-<body class="cdk-theme-gradient">
-    <header>
+<body>
+    <header class="cdk-theme-gradient">
         <nav class="cdk-navbar">
             <h1 class="cdk-logo-text"><a class="cdk-logo-link" href="index.html">Compose Design Kit</a></h1>
             <a id="cdk-ham-nav-toggle" href="#cdk-ham-navbar" aria-label="Open Main Menu">Menu</a>
@@ -23,6 +20,7 @@
                             Started</a></li>
                     <li><a href="docs/buttons.html">Buttons</a></li>
                     <li><a href="docs/card.html">Card</a></li>
+                    <li><a href="docs/code.html">Code</a></li>
                     <li><a href="docs/colors.html">Colors</a></li>
                     <li><a href="docs/grid.html">Grid</a></li>
                     <li><a href="docs/hero.html">Hero</a></li>
@@ -35,39 +33,36 @@
                 <a href="#cdk-ham-nav-toggle" aria-label="Close Main Menu" class="cdk-ham-nav-overlay"></a>
             </div>
         </nav>
-    </header>
-
-    <main>
-    
         <section class="cdk-wrapper">
             <h2>Discover Compose</h2>
             <p>An easy-to-use and light CSS framework with room for creativity.</p>
             <a href="Compose-Design-Kit.zip" class="cdk-btn-primary">Download Compose</a>
             <a href="example/index.html" class="cdk-btn-dark">View Example Page</a>
         </section>
+    </header>
 
-        <div class="cdk-theme-default">
-            <section class="cdk-wrapper">
-                <h2>Install Compose</h2>
-                <p>
-                    To get started with Compose, download the files, unzip them, and copy <span
-                        class="code-quote">compose.css</span> into your CSS folder.
-                    Next, include the following lines in the <span class="code-quote">&lt;head&gt;</span> of your HTML
-                </p>
+    <main>
 
-                <div class="example">
 
-<pre><code>&lt;!--Compose Design Kit Fonts--&gt;
-&lt;link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/&gt;
-&lt;link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet"/&gt;
 
-&lt;!--Compose Design Kit CSS--&gt;
+
+        <section class="cdk-wrapper">
+            <h2>Install Compose</h2>
+            <p>
+                To get started with Compose, download the files, unzip them, and copy <span
+                    class="cdk-code-quote">compose.css</span> into your CSS folder.
+                Next, include the following lines in the <span class="cdk-code-quote">&lt;head&gt;</span> of your HTML
+            </p>
+            
+            <div class="example">
+
+<pre><code>&lt;!--Compose Design Kit CSS--&gt;
 &lt;link rel="stylesheet" href="css/compose.css"/&gt;
 </code></pre>
 
-                </div>
-            </section>
-        </div>
+            </div>
+        </section>
+
     </main>
 </body>
 

@@ -5,9 +5,6 @@
     <meta charset="utf-8" />
     <title>Compose Design Kit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/compose.css" />
 </head>
 
@@ -23,6 +20,7 @@
                             Started</a></li>
                     <li><a href="buttons.html">Buttons</a></li>
                     <li><a href="card.html">Card</a></li>
+                    <li><a href="code.html">Code</a></li>
                     <li><a class="cdk-nav-link-active" href="colors.html">Colors</a></li>
                     <li><a href="grid.html">Grid</a></li>
                     <li><a href="hero.html">Hero</a></li>
@@ -43,14 +41,14 @@
             <p>
                 You can change the color scheme of different elements in your website by choosing from several Compose
                 color themes. To apply a color theme to an element add one of the following classes:
-                <span class="code-quote">cdk-theme-default</span>,
-                <span class="code-quote">cdk-theme-light</span>,
-                <span class="code-quote">cdk-theme-dark</span>, or
-                <span class="code-quote">cdk-theme-gradient</span>.
+                <span class="cdk-code-quote">cdk-theme-default</span>,
+                <span class="cdk-code-quote">cdk-theme-light</span>,
+                <span class="cdk-code-quote">cdk-theme-dark</span>, or
+                <span class="cdk-code-quote">cdk-theme-gradient</span>.
             </p>
             <p>
                 If you do not use any of the color theme classes, the color scheme will be the same as <span
-                    class="code-quote">cdk-theme-default</span>.
+                    class="cdk-code-quote">cdk-theme-default</span>.
             </p>
 
             <div class="example">
@@ -166,21 +164,21 @@
             <h2>Changing Global Colors</h2>
             <p>Compose uses Sass variables to define colors. One way to easily customize Compose 
                 is by changing the value of its color variables. You can do this directly in the Compose
-                <span class="code-quote">_variables.scss</span> partial file.
+                <span class="cdk-code-quote">_variables.scss</span> partial file.
             </p>
 
             <h3>Considering Derived Colors</h3>
             <p>
-                Some Compose colors are based on other colors. For example, changing the value of the <span class="code-quote">$primary-color</span>
-                variable, will automatically change the value of <span class="code-quote">$primary-light</span>,  
-                <span class="code-quote">$primary-light-analogous</span>, and <span class="code-quote">$primary-dark</span>. This change happens because 
-                Compose uses Sass color functions to calculate the values <span class="code-quote">$primary-light</span>, <span class="code-quote">$primary-light-analogous</span>, 
-                and <span class="code-quote"> $primary-dark</span>.
+                Some Compose colors are based on other colors. For example, changing the value of the <span class="cdk-code-quote">$primary-color</span>
+                variable, will automatically change the value of <span class="cdk-code-quote">$primary-light</span>,  
+                <span class="cdk-code-quote">$primary-light-analogous</span>, and <span class="cdk-code-quote">$primary-dark</span>. This change happens because 
+                Compose uses Sass color functions to calculate the values <span class="cdk-code-quote">$primary-light</span>, <span class="cdk-code-quote">$primary-light-analogous</span>, 
+                and <span class="cdk-code-quote"> $primary-dark</span>.
             </p>
             <p>
-                The code below comes from <span class="code-quote">_variables.scss</span> and shows how the values are calculated. Note that <span class="code-quote">$primary-light</span> and  
-                <span class="code-quote">$primary-dark</span> directly depend on  <span class="code-quote">$primary-color</span>. However, <span class="code-quote">$primary-light-analogous</span> is 
-                based on <span class="code-quote">$primary-light</span>. Also notice the  <span class="code-quote">$color-variation</span> variable, which is used to determine how much a color will be darkened or lightened.
+                The code below comes from <span class="cdk-code-quote">_variables.scss</span> and shows how the values are calculated. Note that <span class="cdk-code-quote">$primary-light</span> and  
+                <span class="cdk-code-quote">$primary-dark</span> directly depend on  <span class="cdk-code-quote">$primary-color</span>. However, <span class="cdk-code-quote">$primary-light-analogous</span> is 
+                based on <span class="cdk-code-quote">$primary-light</span>. Also notice the  <span class="cdk-code-quote">$color-variation</span> variable, which is used to determine how much a color will be darkened or lightened.
             </p>
             <div class="example">
 <pre><code>//COLOR SHADE CALCULATION VARIABLE
