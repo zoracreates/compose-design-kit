@@ -656,6 +656,9 @@ pre code {
   -webkit-box-shadow: inherit;
   box-shadow: inherit; }
 
+.cdk-theme-light .cdk-code-quote {
+  background: #EAF0F6; }
+
 /*
 ______________________________________________________
 
