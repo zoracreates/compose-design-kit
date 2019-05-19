@@ -26,3 +26,7 @@ pre code {
     font-family: $code-font;
     box-shadow: inherit;
 }
+
+.cdk-theme-light .cdk-code-quote {
+    background: $light-gray;
+}
