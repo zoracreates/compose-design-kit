@@ -15,7 +15,6 @@
         padding: 0;
         text-transform: uppercase;
         font-size: calc(var(--base-font-size) / var(--multiplier));
-        --link-highlight-size: 0;
 
         > .cdk-sr-only { // accessible hiding of text
             position: absolute; left: -999em;

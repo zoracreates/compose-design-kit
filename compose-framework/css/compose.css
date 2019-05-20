@@ -709,8 +709,7 @@ img.cdk-img-flexible {
   display: inline-block;
   padding: 0;
   text-transform: uppercase;
-  font-size: calc(var(--base-font-size) / var(--multiplier));
-  --link-highlight-size: 0; }
+  font-size: calc(var(--base-font-size) / var(--multiplier)); }
   .cdk-more-link > .cdk-sr-only {
     position: absolute;
     left: -999em; }
