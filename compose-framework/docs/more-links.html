@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Compose Design Kit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/compose.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="cdk-navbar">
+            <h1 class="cdk-logo-text"><a class="cdk-logo-link" href="../index.html">Compose Design Kit</a></h1>
+            <a id="cdk-ham-nav-toggle" href="#cdk-ham-navbar" aria-label="Open Main Menu">Menu</a>
+            <div id="cdk-ham-navbar">
+                <ul class="cdk-nav-links-list">
+                    <li class="cdk-ham-nav-close"><a aria-label="Close Main Menu" href="#cdk-nav-toggle">X</a></li>
+                    <li><a href="../index.html">Get
+                            Started</a></li>
+                    <li><a href="buttons.html">Buttons</a></li>
+                    <li><a href="card.html">Card</a></li>
+                    <li><a href="code.html">Code</a></li>
+                    <li><a href="colors.html">Colors</a></li>
+                    <li><a href="grid.html">Grid</a></li>
+                    <li><a class="cdk-nav-link-active" href="hero.html">Hero</a></li>
+                    <li><a href="images.html">Images</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="breakpoints.html">Responsive Breakpoints</a></li>
+                    <li><a href="table.html">Table</a></li>
+                    <li><a href="typography.html">Typhography</a></li>
+                </ul>
+                <a href="#cdk-ham-nav-toggle" aria-label="Close Main Menu" class="cdk-ham-nav-overlay"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cdk-wrapper">
+            <h2>Accessible More Links</h2>
+            <p>
+                Users of screen readers often have the links on a page read out loud to them. This usually allows them
+                to scan websites more quickly, unless the site has too many non-descriptive links, such as multiple
+                “Read More” links. However, “Read More” links can help some sighted users to scan pages for clickable
+                items. While there are other ways to make items look clickable, sometimes the “Read More” is difficult
+                to avoid. For those difficult situations, Compose created an accessible “Read More” link inspired by
+                <a href="https://mattwilcox.net/web-development/responsive-and-accessible-more-links">Matt Wilcox’s
+                    work</a>.
+            </p>
+
+            <p>
+                These links allow you to include descriptive text for screen readers, and show “Read More” for sighted
+                users. To use these links simply add the classes <span class="cdk-code-quote">cdk-more-link</span> and <span class="cdk-code-quote">cdk-default-more-text</span> 
+                to an <span class="cdk-code-quote">&lt;a&gt;</span>, and
+                include the descriptive screen reader text within a <span class="cdk-code-quote">&lt;span&gt;</span> 
+                with a class of <span class="cdk-code-quote">cdk-sr-only</span> inside the
+                <span class="cdk-code-quote">&lt;a&gt;</span>. You can also add an arrow to the end of the link by using
+                an  <span class="cdk-code-quote">&lt;i&gt;</span> with a class of <span class="cdk-code-quote">cdk-arrow</span> 
+                and the <span class="cdk-code-quote">aria-hidden</span> attribute.
+            </p>
+            <div class="example">
+<pre><code>&lt;a class="cdk-more-link cdk-default-more-text"&gt;
+    &lt;span class="cdk-sr-only"&gt;
+        Empty link screen reader only text example
+    &lt;/span&gt;
+    &lt;i class="cdk-arrow" aria-hidden&gt;&lt;/i&gt;
+&lt;/a&gt;</code></pre>
+                <div class="preview center-view">
+                    <a hre="#" class="cdk-more-link cdk-default-more-text">
+                        <span class="cdk-sr-only">Empty link screen reader only text example</span>
+                        <i class="cdk-arrow" aria-hidden></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

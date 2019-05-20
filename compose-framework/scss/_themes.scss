@@ -19,7 +19,10 @@ body,
 
 a:not([class*="cdk-btn"]) {
     --link-highlight-color: #{lighten($primary-light, 35)};
-    --link-highlight-size: -7px;
+    &:not([class*="cdk-more-link"])  {
+        --link-highlight-size: -7px;
+    }
+
 
     border-bottom: 1px $dark-gray solid;
     text-decoration: none;
