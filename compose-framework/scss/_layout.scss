@@ -31,7 +31,7 @@ html {
 }
 
 .cdk-wrapper {
-    max-width: 1200px;
+    max-width: 1500px;
     min-width: 300px;
     margin:  auto;
     padding: $default-padding;
@@ -47,7 +47,7 @@ html {
 
 //INTITAL (MOBILE) GRID
 [class*="cdk-col"] {
-    --gap: 1.5%;
+    --gap: 5%;
     --columns: 6; 
     --width: var(--width-mobile, var(--columns));
     --width-mobile: 6;

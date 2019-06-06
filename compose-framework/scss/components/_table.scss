@@ -12,8 +12,9 @@ table.cdk-table {
     border-collapse: collapse;
     border-radius: 2px;
     margin: $default-margin 0 $default-margin 0;
-    border: 1px $medium-gray solid;
+    border: 1px darken($light-gray, 30%) solid;
     background: $white;
+    width: 100%;
 
     caption {
         text-align: left;
@@ -25,7 +26,7 @@ table.cdk-table {
    th {
        font-weight: bold;
        &[scope="col"] {
-           background: $primary-color;
+           background: $dark-gray;
            color: $white;
            border: none;
        }
@@ -34,7 +35,14 @@ table.cdk-table {
    th,
    td {
        padding: .5rem;
-       border: 1px $medium-gray solid;
        color: $dark-gray;  
+       border: 1px darken($light-gray, 30%) solid;
+   }
+   tr:nth-child(odd) {
+    background: lighten($light-gray, 4%);
+    }
+
+   tr:nth-child(even) {
+       background: darken($light-gray, 4%);
    }
 }

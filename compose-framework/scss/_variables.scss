@@ -12,7 +12,7 @@ $primary-light: lighten($primary-color, $color-variation);
 $primary-light-analogous: adjust-hue($primary-light, -15);
 
 //SECONDARY COLOR SHADES AND DERIVATIVES
-$secondary-color: #DC4F28;
+$secondary-color: #C54420;
 $secondary-dark: darken($secondary-color, $color-variation);
 $secondary-light: lighten($secondary-color, $color-variation);
 
@@ -22,7 +22,7 @@ $danger-dark: darken($danger-color, $color-variation);
 
 //WHITE, GRAYS, BLACKS
 $dark-gray: #2D3E50;
-$medium-gray: #7F91A4;
+$medium-gray: #5B6F80;
 $light-gray: #EAF0F6;
 $black: darken($dark-gray, $color-variation);
 $white: #FFF;

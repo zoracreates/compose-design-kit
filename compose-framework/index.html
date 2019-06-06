@@ -10,60 +10,64 @@
 
 <body>
     <header>
-        <nav class="cdk-navbar">
+        <nav class="cdk-navbar cdk-theme-dark">
             <h1 class="cdk-logo-text"><a class="cdk-logo-link" href="index.html">Compose Design Kit</a></h1>
-            <a id="cdk-ham-nav-toggle" href="#cdk-ham-navbar" aria-label="Open Main Menu">Menu</a>
-            <div id="cdk-ham-navbar">
-                <ul class="cdk-nav-links-list">
-                    <li class="cdk-ham-nav-close"><a aria-label="Close Main Menu" href="#cdk-nav-toggle">X</a></li>
-                    <li><a class="cdk-nav-link-active" href="index.html">Get
-                            Started</a></li>
-                    <li><a href="docs/buttons.html">Buttons</a></li>
-                    <li><a href="docs/card.html">Card</a></li>
-                    <li><a href="docs/code.html">Code</a></li>
-                    <li><a href="docs/colors.html">Colors</a></li>
-                    <li><a href="docs/grid.html">Grid</a></li>
-                    <li><a href="docs/hero.html">Hero</a></li>
-                    <li><a href="docs/images.html">Images</a></li>
-                    <li><a href="docs/navbar.html">Navbar</a></li>
-                    <li><a href="docs/breakpoints.html">Responsive Breakpoints</a></li>
-                    <li><a href="docs/more-links.html">Read More Links</a></li>
-                    <li><a href="docs/table.html">Table</a></li>
-                    <li><a href="docs/typography.html">Typhography</a></li>
+                <ul  class="cdk-nav-links-list">
+                    <li><a href="https://github.com/zoracreates/compose-design-kit">Github</a></li>
+                    <li><a  href="compose-download.zip">Download</a></li>
+                     <li><a id="cdk-ham-nav-toggle" href="#cdk-ham-navbar" aria-label="Open Main Menu">Docs</a></li>
                 </ul>
-                <a href="#cdk-ham-nav-toggle" aria-label="Close Main Menu" class="cdk-ham-nav-overlay"></a>
-            </div>
         </nav>
-        <section class="cdk-wrapper">
-            <h2>Discover Compose</h2>
-            <p>An easy-to-use and light CSS framework with room for creativity.</p>
-            <a href="compose-download.zip" class="cdk-btn-primary">Download Compose</a>
-            <a href="example/index.html" class="cdk-btn-dark">View Example Page</a>
-        </section>
+       
     </header>
 
-    <main>
+    <main class="cdk-grid">
+            <div class="cdk-col-1-md">
+                <nav id="cdk-ham-navbar" class="cdk-secondary-navbar">
+                    <p class="cdk-nav-title">Documentation</p>
+                        <ul class="cdk-nav-links-list cdk-secondary-nav-links">
+                                <li class="cdk-ham-nav-close"><a aria-label="Close Main Menu" href="#cdk-nav-toggle">X</a></li>
+                                <li><a class="cdk-nav-link-active" href="index.html">Get
+                                        Started</a></li>
+                                <li><a href="docs/breakpoints.html">Breakpoints</a></li>
+                                <li><a href="docs/buttons.html">Buttons</a></li>
+                                <li><a href="docs/card.html">Card</a></li>
+                                <li><a href="docs/code.html">Code</a></li>
+                                <li><a href="docs/colors.html">Colors</a></li>
+                                <li><a href="docs/grid.html">Grid</a></li>
+                                <li><a href="docs/hero.html">Hero</a></li>
+                                <li><a href="docs/images.html">Images</a></li>
+                                <li><a href="docs/more-links.html">More Links</a></li>
+                                <li><a href="docs/navbar.html">Navbar</a></li>
+                                <li><a href="docs/table.html">Table</a></li>
+                                <li><a href="docs/typography.html">Typhography</a></li>
+                            </ul>
 
+                        <a href="#cdk-ham-nav-toggle" aria-label="Close Main Menu" class="cdk-ham-nav-overlay"></a>
+                        </nav>
+            </div>
 
-
-
-        <section class="cdk-wrapper">
-            <h2>Install Compose</h2>
-            <p>
-                To get started with Compose, download the files, unzip them, and copy <span
-                    class="cdk-code-quote">compose.css</span> into your CSS folder.
-                Next, include the following lines in the <span class="cdk-code-quote">&lt;head&gt;</span> of your HTML
-            </p>
-            
-            <div class="example">
+            <section class="cdk-col-5-md">
+                    <h2>Discover Compose</h2>
+                    <p>An easy-to-use, accessible, and light CSS framework with room for creativity.</p>
+                    <a href="compose-download.zip" class="cdk-btn-primary">Download Compose</a>
+                    <a href="example/index.html" class="cdk-btn-dark">View Example Page</a>
+                
+                <h2>Install Compose</h2>
+                <p>
+                    To get started with Compose, download the files, unzip them, and copy <span
+                        class="cdk-code-quote">compose.css</span> into your CSS folder.
+                    Next, include the following lines in the <span class="cdk-code-quote">&lt;head&gt;</span> of your HTML
+                </p>
+                
+                <div class="example">
 
 <pre><code>&lt;!--Compose Design Kit CSS--&gt;
 &lt;link rel="stylesheet" href="css/compose.css"/&gt;
 </code></pre>
 
-            </div>
-        </section>
-
+                </div>
+            </section>
     </main>
 </body>
 

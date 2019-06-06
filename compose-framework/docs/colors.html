@@ -10,14 +10,25 @@
 
 <body>
     <header>
-        <nav class="cdk-navbar">
+        <nav class="cdk-navbar cdk-theme-dark">
             <h1 class="cdk-logo-text"><a class="cdk-logo-link" href="../index.html">Compose Design Kit</a></h1>
-            <a id="cdk-ham-nav-toggle" href="#cdk-ham-navbar" aria-label="Open Main Menu">Menu</a>
-            <div id="cdk-ham-navbar">
-                <ul class="cdk-nav-links-list">
+                <ul  class="cdk-nav-links-list">
+                    <li><a href="https://github.com/zoracreates/compose-design-kit">Github</a></li>
+                    <li><a  href="../compose-download.zip">Download</a></li>
+                    <li><a id="cdk-ham-nav-toggle" href="#cdk-ham-navbar" aria-label="Open Main Menu">Docs</a></li>
+                </ul>
+        </nav>
+               
+    </header>
+
+    <main class="cdk-grid">
+        <div class="cdk-col-1-md">
+            <nav id="cdk-ham-navbar" class="cdk-secondary-navbar">
+                <p class="cdk-nav-title">Documentation</p>
+                <ul class="cdk-nav-links-list cdk-secondary-nav-links">
                     <li class="cdk-ham-nav-close"><a aria-label="Close Main Menu" href="#cdk-nav-toggle">X</a></li>
-                    <li><a href="../index.html">Get
-                            Started</a></li>
+                    <li><a href="../index.html">Get Started</a></li>
+                    <li><a href="breakpoints.html">Breakpoints</a></li>
                     <li><a href="buttons.html">Buttons</a></li>
                     <li><a href="card.html">Card</a></li>
                     <li><a href="code.html">Code</a></li>
@@ -25,18 +36,15 @@
                     <li><a href="grid.html">Grid</a></li>
                     <li><a href="hero.html">Hero</a></li>
                     <li><a href="images.html">Images</a></li>
+                    <li><a href="more-links.html">More Links</a></li>
                     <li><a href="navbar.html">Navbar</a></li>
-                    <li><a href="breakpoints.html">Responsive Breakpoints</a></li>
                     <li><a href="table.html">Table</a></li>
                     <li><a href="typography.html">Typhography</a></li>
                 </ul>
                 <a href="#cdk-ham-nav-toggle" aria-label="Close Main Menu" class="cdk-ham-nav-overlay"></a>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <div class="cdk-wrapper">
+            </nav>
+        </div>
+        <section class="cdk-col-5-md">
             <h2>Color Theme Classes</h2>
             <p>
                 You can change the color scheme of different elements in your website by choosing from several Compose
@@ -248,13 +256,18 @@ $primary-light-analogous: adjust-hue($primary-light, -15);
                             <td>
                                 <ul>
                                     <li>$primary-dark</li>
-                                    <li>$primary-light
-                                        <ul>
-                                            <li>$primary-light-analogous</li>
-                                        </ul>
-                                    </li>
+                                    <li>$primary-light</li>
                                 </ul>
                             </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">$primary-light</th>
+                                <td>
+                                    <ul>
+                                         <li>$primary-light-analogous</li>
+                                    </ul>
+                                </td>
                         </tr>
 
                         <tr>
@@ -288,7 +301,7 @@ $primary-light-analogous: adjust-hue($primary-light, -15);
                 </table>
 
 
-        </div>
+            </section>
     </main>
 
 </body>
