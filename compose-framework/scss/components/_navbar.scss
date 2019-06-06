@@ -118,10 +118,16 @@ ______________________________________________________
         }
     }
 }
-.cdk-secondary-nav.cdk-nav-links-list {
+
+.cdk-secondary-navbar {
+    padding: $default-padding 0;
+}
+
+.cdk-secondary-nav-links.cdk-nav-links-list {
     li {
         display: block;
     }
+  
     a {
         font-weight: normal;
         @media (min-width: $medium-devices) {
@@ -223,7 +229,7 @@ ______________________________________________________
         --desktop-width: 100%;
         }
 
-    .cdk-secondary-nav {
+    .cdk-secondary-nav-links {
         li {
             --mobile-display: block;
             --desktop-display: block;

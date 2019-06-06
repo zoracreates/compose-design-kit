@@ -402,7 +402,7 @@ html {
   justify-content: space-around; }
 
 [class*="cdk-col"] {
-  --gap: 1.5%;
+  --gap: 5%;
   --columns: 6;
   --width: var(--width-mobile, var(--columns));
   --width-mobile: 6;
@@ -641,7 +641,7 @@ ______________________________________________________
 pre code {
   font-family: "Roboto Mono", monospace;
   display: block;
-  max-width: inherit;
+  max-width: 95vw;
   overflow-x: scroll;
   border-radius: 2px;
   color: #EAF0F6;
@@ -813,13 +813,16 @@ ______________________________________________________
       -webkit-box-shadow: none;
       box-shadow: none; }
 
-.cdk-secondary-nav.cdk-nav-links-list li {
+.cdk-secondary-navbar {
+  padding: 20px 0; }
+
+.cdk-secondary-nav-links.cdk-nav-links-list li {
   display: block; }
 
-.cdk-secondary-nav.cdk-nav-links-list a {
+.cdk-secondary-nav-links.cdk-nav-links-list a {
   font-weight: normal; }
   @media (min-width: 48em) {
-    .cdk-secondary-nav.cdk-nav-links-list a {
+    .cdk-secondary-nav-links.cdk-nav-links-list a {
       font-size: calc(var(--p-size) / var(--multiplier)); } }
 
 .cdk-nav-title {
@@ -890,7 +893,7 @@ ______________________________________________________
   --desktop-text-color: inherit;
   --desktop-width: 100%; }
 
-#cdk-ham-navbar .cdk-secondary-nav li {
+#cdk-ham-navbar .cdk-secondary-nav-links li {
   --mobile-display: block;
   --desktop-display: block; }
 
