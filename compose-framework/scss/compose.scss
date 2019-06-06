@@ -22,10 +22,14 @@ body {
   }
 
 .example {
-    margin: $default-margin auto;
+
+    @media (min-width: $medium-devices){
+      max-width: 75vw;
  
      .preview {
-         border: 1px $black solid;
+      background: lighten($light-gray, 2%);
+      border-top: 1px darken($light-gray, 40%) solid;
+      border-bottom: 1px darken($light-gray, 40%) solid;
          &.center-view {
             display: flex;
             justify-content: center;
@@ -34,12 +38,12 @@ body {
          &.img-view {
               line-height: 0;
          }
-         &.dark-view {
-             background: adjust-hue($primary-color, -15)
-         }
      }
-
-
     
 }
 
+.cdk-table {
+  ul li {
+    list-style: none;
+  }
+}

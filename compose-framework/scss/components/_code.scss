@@ -7,15 +7,23 @@ pre code
 ______________________________________________________
 */
 
-pre code {
+pre {
+    width: 100%;
+
+        max-width: 75vw;
+        margin: $default-margin auto;
+
+   
+code {
     font-family: $code-font;
     display: block;
-    max-width: 95vw;
+    // max-width: 95vw;
     overflow-x: scroll;
     border-radius: 2px;
     color: $light-gray;
-    background: $black;
+    background: #5B6F80;
     padding: $default-padding;
+}
 }
 
 .cdk-code-quote {

@@ -6,17 +6,11 @@ ______________________________________________________
 To select all buttons
 %cdk-btn-inverted
 
-To select all inverted buttons
-%cdk-btn-inverted
 
 To select specific buttons
 .cdk-btn-default
 .cdk-btn-primary
 .cdk-btn-dark
-.cdk-btn-inverted
-.cdk-btn-inverted-primary
-.cdk-btn-inverted-dark
-.cdk-btn-deactivated
 
 */
 %cdk-btn {
@@ -42,11 +36,6 @@ To select specific buttons
     }
 }
 
-%cdk-btn-inverted {
-    @extend %cdk-btn;
-    box-shadow: inset 0 0 0 2px $white;
-    background: transparent;
-}
 
 //DEFAULT BTNS
 .cdk-btn-default {
@@ -85,33 +74,12 @@ To select specific buttons
     }
 }
 
-//INVERTED BUTTONs
-.cdk-btn-inverted-default {
-    @extend %cdk-btn-inverted;
-    &:hover{
-        background: $primary-color;
-    }
-}
-
-.cdk-btn-inverted-primary {
-    @extend %cdk-btn-inverted;
-    &:hover {
-        background: $secondary-color;
-    }
-}
-
-.cdk-btn-inverted-dark {
-    @extend %cdk-btn-inverted;
-    &:hover {
-        background-color: $dark-gray;
-    }
-}
 
 //DEACTIVATED BUTTON
 .cdk-btn-deactivated,
 .cdk-btn-deactivated:hover {
     @extend %cdk-btn;
     background: $medium-gray;
-    color: $dark-gray;
+    color: #EBEBEB;
     cursor: default;
 }
