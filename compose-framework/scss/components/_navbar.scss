@@ -39,6 +39,7 @@ ______________________________________________________
     border: var(--border, none);
     padding-left: var(--padding-left, #{$default-padding});
     position: var(--position, static);
+        top: 0;
         left: 0;
     width: var(--width, 100%);
 
@@ -103,7 +104,7 @@ ______________________________________________________
 //NAVBAR
 .cdk-navbar {
     position: relative; 
-    padding: $default-padding / 2  $default-padding;
+    padding: $default-padding;
     width: 100%;
 
     .cdk-logo-text {
@@ -116,44 +117,63 @@ ______________________________________________________
             box-shadow: none;
         }
     }
-
-    .cdk-nav-links-list {
-        line-height: 1.5;
-        margin: 0;
-        padding: 0;
-        z-index: 1001;
- 
-        //clear fix for close button
-         &::after {
-            content: "";
-            clear: both;
-            display: table;
+}
+.cdk-secondary-nav.cdk-nav-links-list {
+    li {
+        display: block;
+    }
+    a {
+        font-weight: normal;
+        @media (min-width: $medium-devices) {
+            font-size: calc(var(--p-size) / var(--multiplier));
         }
-    
-        li {
-            display: inline-block;
-            list-style: none;
-           
-            &:not(:last-child){
-                padding-right: #{$default-padding};
+    }
+}
+
+.cdk-nav-title {
+    font-size: var(--h6-size);
+    text-decoration: underline;
+    margin: 0;
+}
+
+
+.cdk-nav-links-list {
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    z-index: 1001;
+
+    //clear fix for close button
+     &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    li {
+        display: inline-block;
+        list-style: none;
+       
+        &:not(:last-child){
+            padding-right: #{$default-padding};
+        }
+
+       a {
+            border: none;
+            box-shadow: none;
+            padding: 0 .2rem;
+            text-transform: capitalize;
+
+            &:hover {
+                box-shadow: inset 0px 0px 300px $secondary-color;
+                color: $white;
             }
 
-           a {
-                border: none;
-                box-shadow: none;
-                padding: 0 .2rem;
-                text-transform: capitalize;
-
-                &:hover {
-                    box-shadow: inset 0px 0px 300px $secondary-color;
-                    color: $white;
-                }
-
-                &.cdk-nav-link-active { 
-                    box-shadow: inset 0px 0px 300px #{$primary-color}; 
-                    color: $white; 
-                    text-decoration: line-through;
-                }
+            &.cdk-nav-link-active,
+            &.cdk-nav-link-active:hover { 
+                box-shadow: none; 
+                color: inherit;
+                text-decoration: underline;
             }
         }
     }
@@ -172,6 +192,7 @@ ______________________________________________________
     max-width: 4rem;
     padding: .3rem;
     text-align: center;
+
    
     &:hover {
         background: $light-gray;
@@ -202,6 +223,13 @@ ______________________________________________________
         --desktop-width: 100%;
         }
 
+    .cdk-secondary-nav {
+        li {
+            --mobile-display: block;
+            --desktop-display: block;
+        }
+    }
+
     li {
         --mobile-display: block;
         --mobile-font-size: var(--h6-size);
@@ -209,6 +237,7 @@ ______________________________________________________
       
         --desktop-display: inline-block;
         --desktop-font-size: var(--p-size);
+
         --desktop-padding: 0 #{$default-padding} 0 0;
        
         &.cdk-ham-nav-close {
@@ -222,12 +251,10 @@ ______________________________________________________
         }
 
         a {
+            font-weight: normal;
             &.cdk-nav-link-active {
                 --mobile-link-color: #{$medium-gray};
                 --mobile-link-highlight: none;
-
-                --desktop-link-color:  #{$white};
-                --desktop-link-highlight: inset 0px 0px 300px #{$primary-color};
             }
         }
         

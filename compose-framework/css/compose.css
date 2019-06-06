@@ -385,7 +385,7 @@ html {
   box-sizing: inherit; }
 
 .cdk-wrapper {
-  max-width: 1200px;
+  max-width: 1500px;
   min-width: 300px;
   margin: auto;
   padding: 20px; }
@@ -765,6 +765,7 @@ ______________________________________________________
   border: var(--border, none);
   padding-left: var(--padding-left, 20px);
   position: var(--position, static);
+  top: 0;
   left: 0;
   width: var(--width, 100%); }
   #cdk-ham-navbar .cdk-nav-links-list li {
@@ -801,7 +802,7 @@ ______________________________________________________
 
 .cdk-navbar {
   position: relative;
-  padding: 10px 20px;
+  padding: 20px;
   width: 100%; }
   .cdk-navbar .cdk-logo-text {
     font-size: var(--h6-size);
@@ -811,35 +812,50 @@ ______________________________________________________
       border: none;
       -webkit-box-shadow: none;
       box-shadow: none; }
-  .cdk-navbar .cdk-nav-links-list {
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-    z-index: 1001; }
-    .cdk-navbar .cdk-nav-links-list::after {
-      content: "";
-      clear: both;
-      display: table; }
-    .cdk-navbar .cdk-nav-links-list li {
-      display: inline-block;
-      list-style: none; }
-      .cdk-navbar .cdk-nav-links-list li:not(:last-child) {
-        padding-right: 20px; }
-      .cdk-navbar .cdk-nav-links-list li a {
-        border: none;
+
+.cdk-secondary-nav.cdk-nav-links-list li {
+  display: block; }
+
+.cdk-secondary-nav.cdk-nav-links-list a {
+  font-weight: normal; }
+  @media (min-width: 48em) {
+    .cdk-secondary-nav.cdk-nav-links-list a {
+      font-size: calc(var(--p-size) / var(--multiplier)); } }
+
+.cdk-nav-title {
+  font-size: var(--h6-size);
+  text-decoration: underline;
+  margin: 0; }
+
+.cdk-nav-links-list {
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  z-index: 1001; }
+  .cdk-nav-links-list::after {
+    content: "";
+    clear: both;
+    display: table; }
+  .cdk-nav-links-list li {
+    display: inline-block;
+    list-style: none; }
+    .cdk-nav-links-list li:not(:last-child) {
+      padding-right: 20px; }
+    .cdk-nav-links-list li a {
+      border: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      padding: 0 .2rem;
+      text-transform: capitalize; }
+      .cdk-nav-links-list li a:hover {
+        -webkit-box-shadow: inset 0px 0px 300px #DC4F28;
+        box-shadow: inset 0px 0px 300px #DC4F28;
+        color: #FFF; }
+      .cdk-nav-links-list li a.cdk-nav-link-active, .cdk-nav-links-list li a.cdk-nav-link-active:hover {
         -webkit-box-shadow: none;
         box-shadow: none;
-        padding: 0 .2rem;
-        text-transform: capitalize; }
-        .cdk-navbar .cdk-nav-links-list li a:hover {
-          -webkit-box-shadow: inset 0px 0px 300px #DC4F28;
-          box-shadow: inset 0px 0px 300px #DC4F28;
-          color: #FFF; }
-        .cdk-navbar .cdk-nav-links-list li a.cdk-nav-link-active {
-          -webkit-box-shadow: inset 0px 0px 300px #0170A7;
-          box-shadow: inset 0px 0px 300px #0170A7;
-          color: #FFF;
-          text-decoration: line-through; }
+        color: inherit;
+        text-decoration: underline; }
 
 #cdk-ham-nav-toggle {
   --mobile-display: block;
@@ -874,6 +890,10 @@ ______________________________________________________
   --desktop-text-color: inherit;
   --desktop-width: 100%; }
 
+#cdk-ham-navbar .cdk-secondary-nav li {
+  --mobile-display: block;
+  --desktop-display: block; }
+
 #cdk-ham-navbar li {
   --mobile-display: block;
   --mobile-font-size: var(--h6-size);
@@ -886,11 +906,11 @@ ______________________________________________________
     --desktop-display: none;
     float: right;
     margin: 20px; }
-  #cdk-ham-navbar li a.cdk-nav-link-active {
-    --mobile-link-color: #7F91A4;
-    --mobile-link-highlight: none;
-    --desktop-link-color:  #FFF;
-    --desktop-link-highlight: inset 0px 0px 300px #0170A7; }
+  #cdk-ham-navbar li a {
+    font-weight: normal; }
+    #cdk-ham-navbar li a.cdk-nav-link-active {
+      --mobile-link-color: #7F91A4;
+      --mobile-link-highlight: none; }
 
 #cdk-ham-navbar .cdk-ham-nav-overlay {
   --mobile-display: block;
