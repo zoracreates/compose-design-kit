@@ -6,7 +6,7 @@ Compose is a CSS only framework. It is made to be light weight and easy to maint
 
 ## Key Use Features
 * Accessible color palette
-* Accessible read more links (based on [Matt Wilcox's work](https://mattwilcox.net/web-development/responsive-and-accessible-more-links))--COMING SOON
+* Accessible 'Read More' links (based on [Matt Wilcox's work](https://mattwilcox.net/web-development/responsive-and-accessible-more-links))
 * Accessible form stylings --COMING SOON
 * CSS only hamburger navigation for mobile
 * 6 Column Gird

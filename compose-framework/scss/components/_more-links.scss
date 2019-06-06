@@ -1,17 +1,17 @@
-.cdk-read-more-block {
-    .cdk-more-link  {
+.cdk-more-block {
+    position: relative;
+    .cdk-more-link:after {
         @media(min-width: $medium-devices) {
-            a:after {
-                    content: "";
-                    position: absolute; 
-                    top: 0; bottom: 0; left: 0; right: 0;
-            }
+            content: "";
+            position: absolute; 
+            top: 0; bottom: 0; left: 0; right: 0;
         }
     }
 }
 
 .cdk-more-link  {
-        display: inline-block;
+        display: block;
+        width: fit-content;
         padding: 0;
         text-transform: uppercase;
         font-size: calc(var(--base-font-size) / var(--multiplier));
@@ -20,7 +20,7 @@
             position: absolute; left: -999em;
         }
 
-        &.cdk-default-more-text:before{
+        &.cdk-default-more-text:before {
             content: "Read More";
             font-weight: bold;
         }

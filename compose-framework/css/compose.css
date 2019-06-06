@@ -696,17 +696,22 @@ ______________________________________________________
 img.cdk-img-flexible {
   width: 100%; }
 
-@media (min-width: 48em) {
-  .cdk-read-more-block .cdk-more-link a:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0; } }
+.cdk-more-block {
+  position: relative; }
+  @media (min-width: 48em) {
+    .cdk-more-block .cdk-more-link:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0; } }
 
 .cdk-more-link {
-  display: inline-block;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 0;
   text-transform: uppercase;
   font-size: calc(var(--base-font-size) / var(--multiplier)); }
