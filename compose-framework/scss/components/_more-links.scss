@@ -1,0 +1,39 @@
+.cdk-more-block {
+    position: relative;
+    .cdk-more-link:after {
+        @media(min-width: $medium-devices) {
+            content: "";
+            position: absolute; 
+            top: 0; bottom: 0; left: 0; right: 0;
+        }
+    }
+}
+
+.cdk-more-link  {
+        display: block;
+        width: fit-content;
+        padding: 0;
+        text-transform: uppercase;
+        font-size: calc(var(--base-font-size) / var(--multiplier));
+
+        > .cdk-sr-only { // accessible hiding of text
+            position: absolute; left: -999em;
+        }
+
+        &.cdk-default-more-text:before {
+            content: "Read More";
+            font-weight: bold;
+        }
+
+        i.cdk-arrow {
+            border-style: solid;
+            border-color: inherit;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(-45deg);
+        }
+}
+
+
+

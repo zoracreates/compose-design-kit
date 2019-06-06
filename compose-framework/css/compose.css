@@ -322,13 +322,14 @@ body,
 
 a:not([class*="cdk-btn"]) {
   --link-highlight-color: #80d4fe;
-  --link-highlight-size: -7px;
   border-bottom: 1px #2D3E50 solid;
   text-decoration: none;
   color: inherit;
   font-weight: bold;
   -webkit-box-shadow: inset 0 var(--link-highlight-size) 0 0 var(--link-highlight-color);
   box-shadow: inset 0 var(--link-highlight-size) 0 0 var(--link-highlight-color); }
+  a:not([class*="cdk-btn"]):not([class*="cdk-more-link"]) {
+    --link-highlight-size: -7px; }
   a:not([class*="cdk-btn"]):hover {
     --link-highlight-size: 300px; }
 
@@ -694,6 +695,41 @@ ______________________________________________________
 */
 img.cdk-img-flexible {
   width: 100%; }
+
+.cdk-more-block {
+  position: relative; }
+  @media (min-width: 48em) {
+    .cdk-more-block .cdk-more-link:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0; } }
+
+.cdk-more-link {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: calc(var(--base-font-size) / var(--multiplier)); }
+  .cdk-more-link > .cdk-sr-only {
+    position: absolute;
+    left: -999em; }
+  .cdk-more-link.cdk-default-more-text:before {
+    content: "Read More";
+    font-weight: bold; }
+  .cdk-more-link i.cdk-arrow {
+    border-style: solid;
+    border-color: inherit;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
 
 /*
 ______________________________________________________
