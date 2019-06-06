@@ -955,27 +955,27 @@ body {
   margin: 0;
   padding: 0; }
 
-.example {
-  margin: 20px auto; }
-  @media (min-width: 48em) {
-    .example {
-      max-width: 70vw; } }
-  .example .preview {
-    background: #f1f5f9;
-    border-top: 1px #5b8ab9 solid;
-    border-bottom: 1px #5b8ab9 solid; }
-    .example .preview.center-view {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center; }
-    .example .preview.img-view {
-      line-height: 0; }
+@media (min-width: 48em) {
+  .example {
+    margin: 20px auto;
+    max-width: 75vw; } }
+
+.example .preview {
+  background: #f1f5f9;
+  border-top: 1px #5b8ab9 solid;
+  border-bottom: 1px #5b8ab9 solid; }
+  .example .preview.center-view {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .example .preview.img-view {
+    line-height: 0; }
 
 .cdk-table ul li {
   list-style: none; }

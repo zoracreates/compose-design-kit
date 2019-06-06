@@ -24,7 +24,9 @@ body {
 .example {
 
     @media (min-width: $medium-devices){
+      margin: $default-margin auto;
       max-width: 75vw;
+    }
  
      .preview {
       background: lighten($light-gray, 2%);
